@@ -12,7 +12,7 @@ export class InMemoryUserRepository implements UserRepository {
     throw new Error('Method not implemented.')
   }
   findUserByEmail(email: string): Promise<UserData> {
-    throw null
+    return null
   }
   findAllUsers(): Promise<UserData[]> {
     throw new Error('Method not implemented.')
