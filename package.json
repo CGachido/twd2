@@ -1,7 +1,6 @@
 {
-  "name": "TheWiseDev2",
+  "name": "thewisedev2",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,13 +13,15 @@
     "@types/node": "^14.17.27",
     "@types/nodemailer": "^6.4.4",
     "@types/supertest": "^2.0.10",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
     "@typescript-eslint/parser": "^4.33.0",
-    "eslint": "^7.32.0",
+    "eslint": "^8.24.0",
     "eslint-config-standard": "^16.0.1",
-    "eslint-plugin-import": "^2.25.2",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.3.0",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise": "^6.0.1",
     "git-commit-msg-linter": "^3.2.8",
     "husky": "^4.3.0",
     "jest": "^26.6.3",
@@ -28,7 +29,7 @@
     "rimraf": "^3.0.2",
     "supertest": "^6.1.6",
     "ts-jest": "^26.4.3",
-    "typescript": "^4.4.4"
+    "typescript": "^4.8.4"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
@@ -39,5 +40,6 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
