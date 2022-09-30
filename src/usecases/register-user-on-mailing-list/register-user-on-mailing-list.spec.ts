@@ -6,7 +6,7 @@ describe('Register user on mailing list use case', () => {
     const users: UserData[] = []
     console.log(users)
     const inMemoryUserRepository = new InMemoryUserRepository(users)
-    const user = inMemoryUserRepository.findUserByEmail('fake@email.com')
+    const user = await inMemoryUserRepository.findUserByEmail('fake@email.com')
     expect(user).toBeNull()
   })
 
@@ -18,5 +18,15 @@ describe('Register user on mailing list use case', () => {
     await userRepository.add({ name, email })
     const user = await userRepository.findUserByEmail(email)
     expect(user.name).toBe(name)
+  })
+
+  test('should return all users in the repository (InMemory)', async () => {
+    const users: UserData[] = [
+      { name: 'any_name', email: 'email@email.com' },
+      { name: 'second_name', email: 'second@email.com' }
+    ]
+    const userRepository = new InMemoryUserRepository(users)
+    const returnedUsers = userRepository.findAllUsers()
+    expect((await returnedUsers).length).toBe(2)
   })
 })
