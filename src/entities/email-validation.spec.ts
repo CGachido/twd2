@@ -26,7 +26,7 @@ describe('Email validation', () => {
     expect(Email.validate(email)).toBeFalsy()
   })
 
-  test('should not accept empty domain part ', () => {
+  test('should not accept empty local part ', () => {
     const email = 'email@'
     expect(Email.validate(email)).toBeFalsy()
   })
@@ -36,7 +36,7 @@ describe('Email validation', () => {
     expect(Email.validate(email)).toBeFalsy()
   })
 
-  test('should not accept empty local part ', () => {
+  test('should not accept empty domain part ', () => {
     const email = '@email.com'
     expect(Email.validate(email)).toBeFalsy()
   })
