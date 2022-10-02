@@ -4,7 +4,6 @@ import { UserData } from './user-data'
 describe('Register user on mailing list use case', () => {
   test('should return null if user is not found (InMemory)', async () => {
     const users: UserData[] = []
-    console.log(users)
     const sut = new InMemoryUserRepository(users)
     const user = await sut.findUserByEmail('fake@email.com')
     expect(user).toBeNull()
