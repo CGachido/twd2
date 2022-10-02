@@ -7,12 +7,17 @@ describe('Email validation', () => {
   })
 
   test('should not accept empty strings', () => {
-    const email: string = ''
+    const email = ''
     expect(Email.validate(email)).toBeFalsy()
   })
 
   test('should accept valid email', () => {
-    const email: string = 'any@gmail.com'
+    const email = 'any@gmail.com'
     expect(Email.validate(email)).toBeTruthy()
+  })
+
+  test('should not accept local part larger than 64 chars', () => {
+    const email = 'l'.repeat(65) + '@email.com'
+    expect(Email.validate(email)).toBeFalsy()
   })
 })
